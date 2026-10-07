@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran Peserta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pendaftaran Workshop Pengembangan Web</h1>
+  </header>
+
+  <main class="container">
+    <section class="box">
+      <h2>Formulir Pendaftaran</h2>
+
+      <!-- Desain query string: method GET mengirim data lewat URL ke detail.html
+           Contoh hasil: detail.html?nama=Budi+Santoso&nim=123140001&email=budi%40mail.com&... -->
+      <form method="get" action="detail.html">
+        <fieldset>
+          <legend>Data Diri</legend>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+            <div class="form-group">
+              <label for="nim">NIM</label>
+              <input type="text" id="nim" name="nim" placeholder="Contoh: 123140001"
+                     pattern="[0-9]{9}" title="NIM terdiri dari 9 digit angka" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="telp">No. Telepon</label>
+              <input type="tel" id="telp" name="telp" placeholder="08xxxxxxxxxx">
+            </div>
+            <div class="form-group">
+              <label for="tgl">Tanggal Lahir</label>
+              <input type="date" id="tgl" name="tgl">
+            </div>
+            <div class="form-group">
+              <label for="prodi">Program Studi</label>
+              <select id="prodi" name="prodi" required>
+                <option value="">Pilih Program Studi</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Teknik Elektro">Teknik Elektro</option>
+              </select>
+            </div>
+            <div class="form-group full pilihan">
+              <label>Jenis Kelamin</label>
+              <div>
+                <input type="radio" id="lk" name="gender" value="Laki-laki" required>
+                <label for="lk">Laki-laki</label>
+                <input type="radio" id="pr" name="gender" value="Perempuan">
+                <label for="pr">Perempuan</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Minat Materi</legend>
+          <div class="form-group pilihan">
+            <div>
+              <input type="checkbox" id="m1" name="minat" value="HTML">
+              <label for="m1">HTML</label>
+              <input type="checkbox" id="m2" name="minat" value="CSS">
+              <label for="m2">CSS</label>
+              <input type="checkbox" id="m3" name="minat" value="JavaScript">
+              <label for="m3">JavaScript</label>
+            </div>
+          </div>
+          <div class="form-group" style="margin-top:12px;">
+            <label for="alasan">Alasan Mengikuti</label>
+            <textarea id="alasan" name="alasan" rows="3" placeholder="Tuliskan alasan Anda"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="btn-group">
+          <button type="reset">Reset</button>
+          <button type="submit">Daftar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tugas Individu 3 - Pengembangan Aplikasi Web &copy; 2025</p>
+  </footer>
+</body>
+</html>

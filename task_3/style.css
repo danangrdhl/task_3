@@ -1,0 +1,209 @@
+/* ===== Tugas Individu 3 - Pengembangan Aplikasi Web ===== */
+
+/* Selector 1: universal + body */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f6fb;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* ===== Layout (Flexbox + Grid) ===== */
+header,
+footer {
+  background-color: #14599b;
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 16px;
+}
+
+/* ===== Box ===== */
+.box {
+  background-color: #fff;
+  border: 1px solid #d5dde8;
+  border-top: 4px solid #ff914d;
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+  max-width: 640px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.box h2 {
+  margin-top: 0;
+  color: #14599b;
+}
+
+/* ===== Form ===== */
+fieldset {
+  border: 1px solid #14599b;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+}
+
+legend {
+  color: #14599b;
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: 1 / 3;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #aab7c8;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #ff914d;
+  border-color: #ff914d;
+}
+
+.pilihan div label {
+  font-weight: normal;
+  margin-right: 12px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+button,
+.btn {
+  background-color: #14599b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #ff914d;
+  transition: background-color 0.3s;
+}
+
+button[type="reset"] {
+  background-color: #777;
+}
+
+/* ===== Tabel ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+caption {
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 6px 0;
+  border-top: 1px solid #dca806;
+}
+
+th,
+td {
+  border: 1px solid #aab7c8;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #14599b;
+  color: #fff;
+  width: 35%;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(255, 145, 77, 0.15);
+}
+
+tbody tr:hover {
+  background-color: #e8f0fe;
+  transition: background-color 0.3s;
+}
+
+/* ===== Query string (halaman detail) ===== */
+.query-box {
+  background-color: #fffbf2;
+  border: 1px dashed #dca806;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+code {
+  display: block;
+  background-color: #14599b;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 6px;
+  word-break: break-all;
+  font-family: Consolas, monospace;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: 1;
+  }
+}
